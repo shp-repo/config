@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export EDITOR='vim'
+
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
@@ -145,11 +147,11 @@ export JULIA_NUM_THREADS=8
 # broot setup
 source /home/shp/.config/broot/launcher/bash/br
 
-# setup for nnn, mc, ...?
-export EDITOR='vim'
-
 # setup for dotfiles management using git/github
 alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
+# usage:
+#   git remote add origin https://github.com/shp-repo/config.git
+#   git push -u origin main
 # <--- [SHP]
 
 export NVM_DIR="$HOME/.nvm"
