@@ -1,0 +1,104 @@
+{
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 2,
+    "python.venvPath": "~/.venv",
+    "python.defaultInterpreterPath": "/home/shp/.venv/simvis/bin/python",
+    "editor.fontFamily": "CaskaydiaMono Nerd Font Mono",
+    "editor.fontLigatures": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "extensions.autoUpdate": false,
+    "update.mode": "manual",
+    "npm.fetchOnlinePackageInfo": false,
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "julia.enableCrashReporter": false,
+    "julia.execution.codeInREPL": true,
+    "editor.minimap.enabled": false,
+    "gitlens.telemetry.enabled": false,
+    "gitlens.plusFeatures.enabled": false,
+    "git-graph.showStatusBarItem": false,
+    "debug.console.fontSize": 13,
+    "chat.editor.fontSize": 13,
+    "terminal.integrated.scrollback": 10000,
+    "julia.additionalArgs": [],
+    "window.customTitleBarVisibility": "auto",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "julia.persistentSession.alwaysCopy": true,
+    "workbench.activityBar.location": "hidden",
+    "julia.workspace.showModules": false,
+    "git.openRepositoryInParentFolders": "never",
+    "quarto.render.previewType": "external",
+    "editor.fontSize": 13,
+    "terminal.integrated.fontSize": 13,
+    "markdown.preview.fontSize": 13,
+    "editor.maxTokenizationLineLength": 200005,
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+    "editor.cursorStyle": "block",
+    "markdown.preview.lineHeight": 1.1,
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "b"],
+        "commands": ["workbench.action.toggleSidebarVisibility"]
+      },
+      {
+        "before": ["<leader>", "r", "s"],
+        "commands": ["editor.action.rename"]
+      },
+      {
+        "before": ["H"],
+        "commands": ["editor.action.showHover"]
+      },
+      {
+        "before": ["<leader>", "0"],
+        "commands": ["workbench.action.focusSideBar"]
+      },
+      {
+        "before": ["<leader>", "1"],
+        "commands": ["workbench.action.focusFirstEditorGroup"]
+      },
+      {
+        "before": ["<leader>", "2"],
+        "commands": ["workbench.action.focusSecondEditorGroup"]
+      },
+      {
+        "before": ["<leader>", "j", "j"],
+        "commands": ["workbench.action.togglePanel"]
+      },
+      {
+        "before": ["<leader>", "j", "J"],
+        "commands": ["workbench.action.toggleMaximizedPanel"]
+      },
+      {
+        "before": ["<leader>", "j", "`"],
+        "commands": ["workbench.action.terminal.toggleTerminal"]
+      },
+      {
+        "before": ["<leader>", "j", "o"],
+        "commands": ["language-julia.startREPL"]
+      },
+      {
+        "before": ["<leader>", "j", "r"],
+        "commands": ["language-julia.restartREPL"]
+      },
+      {
+        "before": ["<leader>", "j", "n"],
+        "commands": ["language-julia.newJuliaFile"]
+      },
+    ],
+}

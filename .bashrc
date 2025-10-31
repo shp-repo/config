@@ -160,6 +160,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   git clone --bare https://github.com/shp-repo/config.git
 #   alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   config checkout [-f for overwriting existing dotfiles]
+#   config config --local status.showUntrackedFiles no
 # <--- {config}
 
 # <--- [SHP]
