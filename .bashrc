@@ -147,6 +147,8 @@ source /home/shp/.config/broot/launcher/bash/br
 # setup for dotfiles management using git/github
 alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 # ---> {config}
+# github setup: "Caching your GitHub credentials in Git"
+#   https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git
 # initial setup:
 #   git init --bare $HOME/.myconfig
 #   echo ".myconfig/" >> .gitignore
@@ -161,6 +163,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   config checkout [-f for overwriting existing dotfiles]
 #   config config --local status.showUntrackedFiles no
+#   config push --set-upstream origin main
 # <--- {config}
 
 # <--- [SHP]

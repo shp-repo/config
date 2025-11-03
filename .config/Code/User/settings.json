@@ -53,52 +53,32 @@
     "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
       {
+        "before": ["<leader>", "q"],
+        "commands": ["workbench.action.quit"]
+      },
+      {
+        "before": ["<leader>", "w"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      },
+      {
         "before": ["<leader>", "b"],
         "commands": ["workbench.action.toggleSidebarVisibility"]
+      },
+      {
+        "before": ["<leader>", "p"],
+        "commands": ["workbench.action.quickOpen"]
       },
       {
         "before": ["<leader>", "r", "s"],
         "commands": ["editor.action.rename"]
       },
       {
-        "before": ["H"],
+        "before": ["<leader>", "h"],
         "commands": ["editor.action.showHover"]
       },
       {
-        "before": ["<leader>", "0"],
-        "commands": ["workbench.action.focusSideBar"]
-      },
-      {
-        "before": ["<leader>", "1"],
-        "commands": ["workbench.action.focusFirstEditorGroup"]
-      },
-      {
-        "before": ["<leader>", "2"],
-        "commands": ["workbench.action.focusSecondEditorGroup"]
-      },
-      {
-        "before": ["<leader>", "j", "j"],
+        "before": ["<leader>", "j"],
         "commands": ["workbench.action.togglePanel"]
-      },
-      {
-        "before": ["<leader>", "j", "J"],
-        "commands": ["workbench.action.toggleMaximizedPanel"]
-      },
-      {
-        "before": ["<leader>", "j", "`"],
-        "commands": ["workbench.action.terminal.toggleTerminal"]
-      },
-      {
-        "before": ["<leader>", "j", "o"],
-        "commands": ["language-julia.startREPL"]
-      },
-      {
-        "before": ["<leader>", "j", "r"],
-        "commands": ["language-julia.restartREPL"]
-      },
-      {
-        "before": ["<leader>", "j", "n"],
-        "commands": ["language-julia.newJuliaFile"]
       },
     ],
 }
