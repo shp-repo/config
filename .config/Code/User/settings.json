@@ -80,5 +80,21 @@
         "before": ["<leader>", "j"],
         "commands": ["workbench.action.togglePanel"]
       },
+      {
+        "before": ["<leader>", "f"],
+        "commands": ["actions.find"]
+      },
+      {
+        "before": ["<leader>", "h"],
+        "commands": ["editor.action.startFindReplaceAction"]
+      },
+      {
+        "before": ["<leader>", "F"],
+        "commands": ["workbench.action.findInFiles"]
+      },
+      {
+        "before": ["<leader>", "H"],
+        "commands": ["workbench.action.replaceInFiles"]
+      },
     ],
 }

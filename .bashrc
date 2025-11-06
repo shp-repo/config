@@ -142,7 +142,7 @@ export INFOPATH=/home/shp/LaTeX/texmf-dist/doc/info:$INFOPATH
 export JULIA_NUM_THREADS=8
 
 # broot setup
-source /home/shp/.config/broot/launcher/bash/br
+# source /home/shp/.config/broot/launcher/bash/br
 
 # setup for dotfiles management using git/github
 alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
