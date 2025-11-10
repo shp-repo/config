@@ -44,7 +44,6 @@
     "editor.maxTokenizationLineLength": 200005,
     "telemetry.editStats.enabled": false,
     "telemetry.feedback.enabled": false,
-    "editor.cursorStyle": "block",
     "markdown.preview.lineHeight": 1.1,
     "vim.hlsearch": true,
     "vim.smartRelativeLine": true,
