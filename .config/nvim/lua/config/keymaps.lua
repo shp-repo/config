@@ -20,5 +20,6 @@ if vim.g.vscode then
   keymap("n", "<leader>j", "<cmd>lua require('vscode').action('workbench.action.togglePanel')<CR>")
   keymap("n", "<leader>f", "<cmd>lua require('vscode').action('actions.find')<CR>")
   keymap("n", "<leader>h", "<cmd>lua require('vscode').action('editor.action.startFindReplaceAction')<CR>")
+  keymap("n", "<leader>km", "<cmd>lua require('vscode').action('workbench.action.toggleMaximizeEditorGroup')<CR>")
 
 end

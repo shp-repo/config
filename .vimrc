@@ -54,6 +54,8 @@ endif
 
 " ---> [SHP]
 set nobackup
+set number
+set relativenumber
 
 " <leader> key setting
 let mapleader = " "
