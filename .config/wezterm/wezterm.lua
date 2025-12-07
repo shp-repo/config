@@ -36,16 +36,16 @@ config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 -- setup ssh channel
 config.ssh_domains = wezterm.default_ssh_domains()
 config.keys = {
-  { key = 'A', mods = 'LEADER', action = action.AttachDomain 'omeda' },
+  { key = 'a', mods = 'LEADER', action = action.AttachDomain 'SSHMUX:omeda' },
   -- Detaches the domain associated with the current pane
   {
-    key = 'D',
+    key = 'd',
     mods = 'LEADER',
     action = action.DetachDomain 'CurrentPaneDomain',
   },
   -- Detaches the "devhost" domain
   -- {
-    -- key = 'E',
+    -- key = 'e',
     -- mods = 'LEADER',
     -- action = action.DetachDomain { DomainName = 'devhost' },
   -- },
