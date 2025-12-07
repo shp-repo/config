@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # >>> juliaup initialize >>>
 
@@ -139,7 +139,7 @@ export INFOPATH=/home/shp/LaTeX/texmf-dist/doc/info:$INFOPATH
 
 # ---> [SHP]
 # Julia lang nthreads setup
-export JULIA_NUM_THREADS=8
+export JULIA_NUM_THREADS=auto
 
 # broot setup
 # source /home/shp/.config/broot/launcher/bash/br
@@ -164,6 +164,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   config checkout [-f for overwriting existing dotfiles]
 #   config config --local status.showUntrackedFiles no
 #   config push --set-upstream origin main
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # <--- {config}
 
 # <--- [SHP]

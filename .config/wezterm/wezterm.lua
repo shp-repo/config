@@ -3,6 +3,7 @@ local wezterm = require('wezterm')
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+local action = wezterm.action
 
 -- This is where you actually apply your config choices.
 
@@ -22,7 +23,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
 
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
-config.keys = {}
+-- config.keys = {}
 -- for key, direction in pairs({ 'j', 'k', 'h', 'l' },
 -- 	                    { 'Down', 'Up', 'Left', 'Right' }) do
 --   table.insert(keys, {
@@ -32,7 +33,23 @@ config.keys = {}
 --   })
 -- end
 
+-- setup ssh channel
 config.ssh_domains = wezterm.default_ssh_domains()
+config.keys = {
+  { key = 'A', mods = 'LEADER', action = action.AttachDomain 'omeda' },
+  -- Detaches the domain associated with the current pane
+  {
+    key = 'D',
+    mods = 'LEADER',
+    action = action.DetachDomain 'CurrentPaneDomain',
+  },
+  -- Detaches the "devhost" domain
+  -- {
+    -- key = 'E',
+    -- mods = 'LEADER',
+    -- action = action.DetachDomain { DomainName = 'devhost' },
+  -- },
+}
 
 
 -- Finally, return the configuration to wezterm:
