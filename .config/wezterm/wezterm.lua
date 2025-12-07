@@ -1,5 +1,5 @@
 -- Pull in the wezterm API
-local wezterm = require("wezterm")
+local wezterm = require('wezterm')
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -12,34 +12,28 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 14
-config.color_scheme = "Tokyo Night Moon"
+config.color_scheme = 'Tokyo Night Moon'
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
 -- config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "flexoki-dark"
 
 config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = 'RESIZE'
 
-
--- config.ssh_domains = wezterm.default_ssh_domains()
--- config.ssh_domains = {}
--- for host, contents in pairs(wezterm.enumerate_ssh_hosts()) do
---     table.insert(config.ssh_domains, {
---         name = host,
---         remote_address = contents.hostname,
---         username = contents.user,
---         -- You can also include other options if necessary
---         ssh_option = { identityfile = contents.identityfile },
---     })
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.keys = {}
+-- for key, direction in pairs({ 'j', 'k', 'h', 'l' },
+-- 	                    { 'Down', 'Up', 'Left', 'Right' }) do
+--   table.insert(keys, {
+--     key = key,
+--     mods = 'LEADER',
+--     action = wezterm.action.ActivatePaneDirection(direction)
+--   })
 -- end
 
-config.ssh_domains = {
-  {
-    name = 'omeda',
-    remote_address = 'omeda',
-    username = 'shp',
-  },
-}
+config.ssh_domains = wezterm.default_ssh_domains()
+
 
 -- Finally, return the configuration to wezterm:
 return config
