@@ -1,25 +1,14 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- [[ Set up keymaps ]] See `:h vim.keymap.set()`, `:h mapping`, `:h keycodes`
 
--- [SHP] vscode.neovim - additional keymap
-if vim.g.vscode then
-  -- VSCode Neovim
-  local keymap = vim.keymap.set
-  local opts = { noremap = true, silent = true }
-  
-  -- remap leader key
-  keymap("n", "<Space>", "", opts)
-  vim.g.mapleader = " "
-  vim.g.maplocalleader = " "
+-- Use <Esc> to exit terminal mode
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
-  -- call vscode commands from neovim
-  keymap("n", "<leader>q", "<cmd>lua require('vscode').action('workbench.action.quit')<CR>")
-  keymap("n", "<leader>w", "<cmd>lua require('vscode').action('workbench.action.closeActiveEditor')<CR>")
-  keymap("n", "<leader>b", "<cmd>lua require('vscode').action('workbench.action.toggleSidebarVisibility')<CR>")
-  keymap("n", "<leader>j", "<cmd>lua require('vscode').action('workbench.action.togglePanel')<CR>")
-  keymap("n", "<leader>f", "<cmd>lua require('vscode').action('actions.find')<CR>")
-  keymap("n", "<leader>h", "<cmd>lua require('vscode').action('editor.action.startFindReplaceAction')<CR>")
-  keymap("n", "<leader>km", "<cmd>lua require('vscode').action('workbench.action.toggleMaximizeEditorGroup')<CR>")
-
-end
+-- Map <A-j>, <A-k>, <A-h>, <A-l> to navigate between windows in any modes
+vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-n><C-w>h')
+vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-n><C-w>j')
+vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-n><C-w>k')
+vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-n><C-w>l')
+vim.keymap.set({ 'n' }, '<A-h>', '<C-w>h')
+vim.keymap.set({ 'n' }, '<A-j>', '<C-w>j')
+vim.keymap.set({ 'n' }, '<A-k>', '<C-w>k')
+vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
