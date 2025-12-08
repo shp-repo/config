@@ -115,8 +115,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR='nvim'
-
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
@@ -138,6 +136,8 @@ export INFOPATH=/home/shp/LaTeX/texmf-dist/doc/info:$INFOPATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ---> [SHP]
+export EDITOR='nvim'
+
 # Julia lang nthreads setup
 export JULIA_NUM_THREADS=auto
 
@@ -159,10 +159,13 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   config remote add origin https://github.com/shp-repo/config.git
 #   config push -u origin main
 # migration setup:
-#   git clone --bare https://github.com/shp-repo/config.git
+#   mkdir ~/.myconfig
+#   echo ".myconfig/" >> .gitignore
+#   git clone --bare https://github.com/shp-repo/config.git $HOME/.myconfig
 #   alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   config checkout [-f for overwriting existing dotfiles]
 #   config config --local status.showUntrackedFiles no
+#   ...
 #   config push --set-upstream origin main
 
 export XDG_CONFIG_HOME="$HOME/.config"
