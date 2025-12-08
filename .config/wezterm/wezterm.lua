@@ -22,7 +22,7 @@ config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "flexoki-dark"
 
-config.hide_tab_bar_if_only_one_tab = true
+-- config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
 
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
@@ -73,6 +73,7 @@ wezterm.on(
       { Background = { Color = '#2b2042' } },
       { Foreground = { Color = '#c0c0c0' } },
       { Text = '  ' .. window:active_workspace() .. '  '},
+      { Text = '  ' .. wezterm.hostname() .. '  ' },
       { Background = { Color = '#1b1032' } },
       { Foreground = { Color = '#808080' } },
       { Text = '  ' .. wezterm.strftime('%a %b %-d %H:%M') .. '  ' },
