@@ -136,6 +136,9 @@ export INFOPATH=/home/shp/LaTeX/texmf-dist/doc/info:$INFOPATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ---> [SHP]
+export XDG_CONFIG_HOME="$HOME/.config"
+export PATH=$HOME/.local/bin:$PATH
+
 export EDITOR='nvim'
 
 # Julia lang nthreads setup
@@ -168,7 +171,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
 #   ...
 #   config push --set-upstream origin main
 
-export XDG_CONFIG_HOME="$HOME/.config"
 
 # <--- {config}
 
