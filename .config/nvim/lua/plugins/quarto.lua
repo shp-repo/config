@@ -1,4 +1,3 @@
--- plugins/quarto.lua
 return {
   {
     "quarto-dev/quarto-nvim",

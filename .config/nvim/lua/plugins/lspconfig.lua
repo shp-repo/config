@@ -8,4 +8,16 @@ return {
       vim.lsp.enable('julials')
     end,
   },
+
+  {
+     'nvim-treesitter/nvim-treesitter',
+     lazy = false,
+     branch = 'main',
+     build = ':TSUpdate',
+     opts = {
+         ensure_installed = { 'c', 'lua', 'markdown', 'julia'},
+         highlight = { enable = true },
+         indent = { enable = true },
+       },
+  },
 }
