@@ -40,5 +40,6 @@ return {
     config = function()
       vim.cmd([[colorscheme flexoki-dark]])
     end,
-    }
+    },
+
 }

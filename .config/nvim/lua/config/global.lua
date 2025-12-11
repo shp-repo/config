@@ -42,6 +42,7 @@ vim.o.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s) See `:help 'confirm'`
 vim.o.confirm = true
 
+vim.opt.termguicolors = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -49,4 +50,6 @@ vim.opt.softtabstop = 4
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.signcolumn = 'yes'
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 

@@ -1,11 +1,11 @@
 return {
   -- Treesitter
-  {
-    'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    branch = 'main',
-    build = ':TSUpdate'
-  },
+  -- {
+    -- 'nvim-treesitter/nvim-treesitter',
+    -- lazy = false,
+    -- branch = 'main',
+    -- build = ':TSUpdate'
+  -- },
 
   -- Completion
   { 'hrsh7th/nvim-cmp' },

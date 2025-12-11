@@ -40,14 +40,19 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- require'nvim-treesitter'.install { 'bash', 'lua', 'markdown', 'c', 'julia' }
 
 
+-- nvim-cmp plugin
 require'cmp'.setup {
   sources = {
-    { name = 'nvim_lsp' }
+    { name = 'nvim_lsp' }   -- nvim_lsp denotes cmp-nvim-lsp plugin
   }
 }
 
+
+-- cmp-nvim-lsp plugin
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+
+-- lsp default config which is merged into individual lsp client configs in lsp folder
 vim.lsp.config('*', {
   capabilities = capabilities
 })
