@@ -148,7 +148,12 @@ export JULIA_NUM_THREADS=auto
 # source /home/shp/.config/broot/launcher/bash/br
 
 # setup for dotfiles management using git/github
-alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
+config() {
+  /usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME "$@"
+}
+export -f config # Export the function
+# alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
+#
 # ---> {config}
 # github setup: "Caching your GitHub credentials in Git"
 #   https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git
