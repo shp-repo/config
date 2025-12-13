@@ -1,11 +1,5 @@
 return {
   {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opts = {}
-  },
-
-  {
     "kylechui/nvim-surround",
     version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
@@ -31,6 +25,19 @@ return {
       },
     },
   },
+
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {}
+  },
+
+  -- {
+    -- 'akinsho/bufferline.nvim',
+    -- version = "*",
+    -- dependencies = 'nvim-tree/nvim-web-devicons',
+    -- opts = {}
+  -- },
 
   {
     'nvim-tree/nvim-tree.lua',
