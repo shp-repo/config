@@ -63,3 +63,5 @@ vim.lsp.enable 'julials'
 vim.lsp.enable 'clangd'
 vim.lsp.enable 'marksman'
 
+vim.lsp.enable 'zls'
+vim.g.zig_fmt_autosave = 0
