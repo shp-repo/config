@@ -147,6 +147,9 @@ export JULIA_NUM_THREADS=auto
 # broot setup
 # source /home/shp/.config/broot/launcher/bash/br
 
+alias zigg='zig build-exe -OReleaseSmall -lc' 
+alias zigs='zig build-exe -OReleaseSafe -lc' 
+
 # setup for dotfiles management using git/github
 config() {
   /usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME "$@"
