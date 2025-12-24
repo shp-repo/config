@@ -25,7 +25,7 @@ config.color_scheme = "Catppuccin Macchiato"
 -- config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
 
-config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = '\\', mods = 'CTRL', timeout_milliseconds = 1000 }
 -- config.keys = {}
 -- for key, direction in pairs({ 'j', 'k', 'h', 'l' },
 -- 	                    { 'Down', 'Up', 'Left', 'Right' }) do
