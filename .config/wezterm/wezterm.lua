@@ -12,9 +12,9 @@ config.initial_cols = 96
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.font = wezterm.font 'JetBrainsMono Nerd Font', {weight="Light"}
 config.font_size = 14
-config.line_height = 1.1
+-- config.line_height = 1.1
 
 -- config.color_scheme = 'Tokyo Night Moon'
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
