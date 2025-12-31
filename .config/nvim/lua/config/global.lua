@@ -33,7 +33,7 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 5
 
 -- Show <tab> and trailing spaces
 -- vim.o.list = true
@@ -43,10 +43,10 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.opt.termguicolors = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.opt.softtabstop = 2
+vim.opt.softtabstop = 4
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.signcolumn = 'yes'

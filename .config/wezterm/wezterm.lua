@@ -12,8 +12,8 @@ config.initial_cols = 96
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font = wezterm.font 'JetBrainsMono Nerd Font', {weight="Light"}
-config.font_size = 14
+config.font = wezterm.font('JetBrainsMono Nerd Font', {weight="Light"})
+config.font_size = 13
 -- config.line_height = 1.1
 
 -- config.color_scheme = 'Tokyo Night Moon'
@@ -143,7 +143,7 @@ config.ssh_domains = wezterm.default_ssh_domains()
 config.keys = {
   { key = 'a',
     mods = 'LEADER',
-    action = action.AttachDomain 'SSHMUX:omeda' 
+    action = action.AttachDomain 'SSHMUX:omeda'
   },
   -- Detaches the domain associated with the current pane
   {
