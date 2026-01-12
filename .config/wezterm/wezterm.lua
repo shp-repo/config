@@ -16,16 +16,16 @@ config.font = wezterm.font('JetBrainsMono Nerd Font', {weight="Light"})
 config.font_size = 13
 -- config.line_height = 1.1
 
--- config.color_scheme = 'Tokyo Night Moon'
+config.color_scheme = 'Tokyo Night Moon'
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
-config.color_scheme = "Catppuccin Macchiato"
+-- config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "flexoki-dark"
 
 -- config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
 
-config.leader = { key = '\\', mods = 'CTRL', timeout_milliseconds = 1500 }
+config.leader = { key = '\\', mods = 'ALT', timeout_milliseconds = 1500 }
 -- config.keys = {}
 -- for key, direction in pairs({ 'j', 'k', 'h', 'l' },
 -- 	                    { 'Down', 'Up', 'Left', 'Right' }) do
