@@ -54,3 +54,24 @@ vim.opt.signcolumn = 'yes'
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.showmode = false
+
+
+-- Autocmd to set local scrolloff to 0 when entering a terminal buffer
+vim.api.nvim_create_autocmd("TermEnter", {
+  callback = function()
+    vim.opt_local.scrolloff = 0
+  end,
+  desc = "Disable scrolloff in terminal",
+})
+
+-- Autocmd to restore the global scrolloff value when leaving a terminal buffer
+vim.api.nvim_create_autocmd("TermLeave", {
+  callback = function()
+    -- This automatically restores the global value because scrolloff is a
+    -- global-local option. Setting it globally sets the default.
+    -- The TermLeave event handles the transition back to a non-terminal buffer
+    -- where the global setting should apply, or you can explicitly set it:
+    -- vim.opt_local.scrolloff = vim.opt.scrolloff
+  end,
+  desc = "Restore scrolloff outside terminal",
+})

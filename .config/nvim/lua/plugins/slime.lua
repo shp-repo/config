@@ -5,7 +5,7 @@ return {
     lazy = true,
 
     init = function()
-      vim.g.slime_target = 'neovim'
+      vim.g.slime_target = 'wezterm'
       vim.g.slime_no_mappings = true
     end,
 
