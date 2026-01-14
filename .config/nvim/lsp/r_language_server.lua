@@ -12,9 +12,20 @@
 
 ---@type vim.lsp.Config
 return {
-    cmd = { 'R', '--no-echo', '-e', 'languageserver::run()' },
-  filetypes = { 'r' },
+  cmd = { 'R', '--no-echo', '-e', 'languageserver::run()' },
+  filetypes = { 'r', 'R' },
   root_dir = function(bufnr, on_dir)
     on_dir(vim.fs.root(bufnr, '.git') or vim.uv.os_homedir())
   end,
+  settings = {
+    r = {
+      lsp = {
+        debug = false,
+        diagnostics = false,
+        formatting = {
+          style = "tidyverse",
+        },
+      },
+    },
+  },
 }

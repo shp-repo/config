@@ -7,6 +7,8 @@ local action = wezterm.action
 
 -- This is where you actually apply your config choices.
 
+config.term = "wezterm"
+
 -- For example, changing the initial geometry for new windows:
 config.initial_cols = 96
 config.initial_rows = 28
