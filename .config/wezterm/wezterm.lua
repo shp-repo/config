@@ -18,25 +18,17 @@ config.font = wezterm.font('JetBrainsMono Nerd Font', {weight="Light"})
 config.font_size = 13
 -- config.line_height = 1.1
 
-config.color_scheme = 'Tokyo Night Moon'
+-- config.color_scheme = 'Tokyo Night Moon'
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
--- config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "flexoki-dark"
 
 -- config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
 
-config.leader = { key = '\\', mods = 'ALT', timeout_milliseconds = 1500 }
--- config.keys = {}
--- for key, direction in pairs({ 'j', 'k', 'h', 'l' },
--- 	                    { 'Down', 'Up', 'Left', 'Right' }) do
---   table.insert(keys, {
---     key = key,
---     mods = 'LEADER',
---     action = wezterm.action.ActivatePaneDirection(direction)
---   })
--- end
+config.leader = { key = '[', mods = 'CTRL', timeout_milliseconds = 1500 }
+
 
 -- fancy tab bar
 config.window_frame = {
@@ -143,22 +135,26 @@ wezterm.on(
 config.ssh_domains = wezterm.default_ssh_domains()
 
 config.keys = {
-  { key = 'a',
-    mods = 'LEADER',
-    action = action.AttachDomain 'SSHMUX:omeda'
-  },
+
+  -- Resize the active pane by 5 cells in the specified direction
+  { key = 'h', mods = 'LEADER', action = action.ActivatePaneDirection('Left'), },
+  { key = 'j', mods = 'LEADER', action = action.ActivatePaneDirection('Down'), },
+  { key = 'k', mods = 'LEADER', action = action.ActivatePaneDirection('Up'), },
+  { key = 'l', mods = 'LEADER', action = action.ActivatePaneDirection('Right'), },
+
+  -- Resize the active pane by 5 cells in the specified direction
+  { key = 'H', mods = 'LEADER', action = action.AdjustPaneSize { 'Left', 5 }, },
+  { key = 'J', mods = 'LEADER', action = action.AdjustPaneSize { 'Down', 5 }, },
+  { key = 'K', mods = 'LEADER', action = action.AdjustPaneSize { 'Up', 5 }, },
+  { key = 'L', mods = 'LEADER', action = action.AdjustPaneSize { 'Right', 5 }, },
+
+  -- Attach & detach ssh channel
+  { key = 'a', mods = 'LEADER', action = action.AttachDomain 'SSHMUX:omeda' },
   -- Detaches the domain associated with the current pane
-  {
-    key = 'd',
-    mods = 'LEADER',
-    action = action.DetachDomain 'CurrentPaneDomain',
-  },
+  { key = 'd', mods = 'LEADER', action = action.DetachDomain 'CurrentPaneDomain', },
   -- Detaches the "devhost" domain
-  -- {
-    -- key = 'e',
-    -- mods = 'LEADER',
-    -- action = action.DetachDomain { DomainName = 'devhost' },
-  -- },
+  { key = 'e', mods = 'LEADER', action = action.DetachDomain { DomainName = 'devhost' }, },
+
 }
 
 -- Finally, return the configuration to wezterm:
