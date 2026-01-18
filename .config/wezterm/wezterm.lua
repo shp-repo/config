@@ -7,6 +7,8 @@ local action = wezterm.action
 
 -- This is where you actually apply your config choices.
 
+config.default_prog = { 'bash' }
+
 config.term = "wezterm"
 
 -- For example, changing the initial geometry for new windows:
@@ -27,7 +29,7 @@ config.color_scheme = "Catppuccin Macchiato"
 -- config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
 
-config.leader = { key = '[', mods = 'CTRL', timeout_milliseconds = 1500 }
+config.leader = { key = ' ', mods = 'CTRL', timeout_milliseconds = 1500 }
 
 
 -- fancy tab bar
