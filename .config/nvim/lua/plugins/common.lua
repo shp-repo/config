@@ -41,8 +41,11 @@ return {
 
   {
     'nvim-tree/nvim-tree.lua',
-    -- lazy = true,
+    lazy = false,
     opts = {},
+    keys = {
+        { '<C-t>', ':NvimTreeToggle<cr>', mode = 'n', desc = 'Toggle NvimTree'},
+    },
   },
 
   {

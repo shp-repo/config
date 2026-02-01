@@ -12,13 +12,18 @@
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'R', '--no-echo', '-e', 'languageserver::run()' },
+  cmd = {
+    'R', '--no-echo', '-e',
+    -- 'renv::load("~/stage/R/lsp-env"); languageserver::run()' },
+    'languageserver::run()' },
   filetypes = { 'r', 'R' },
-  root_dir = function(bufnr, on_dir)
-    on_dir(vim.fs.root(bufnr, '.git') or vim.uv.os_homedir())
-  end,
+  root_markers = { '.git', 'renv.lock' },
+--   root_dir = function(bufnr, on_dir)
+--     on_dir(vim.fs.root(bufnr, '.git') or vim.uv.os_homedir())
+--   end,
   settings = {
     r = {
+--      libPaths = { os.getenv("HOME") .. "/stage/R/lsp-env" },
       lsp = {
         debug = false,
         diagnostics = false,
