@@ -139,7 +139,7 @@ config.ssh_domains = wezterm.default_ssh_domains()
 
 config.keys = {
 
-  -- Resize the active pane by 5 cells in the specified direction
+  -- Change an active pane to the specified direction
   { key = 'h', mods = 'LEADER', action = action.ActivatePaneDirection('Left'), },
   { key = 'j', mods = 'LEADER', action = action.ActivatePaneDirection('Down'), },
   { key = 'k', mods = 'LEADER', action = action.ActivatePaneDirection('Up'), },
@@ -151,8 +151,11 @@ config.keys = {
   { key = 'K', mods = 'LEADER', action = action.AdjustPaneSize { 'Up', 5 }, },
   { key = 'L', mods = 'LEADER', action = action.AdjustPaneSize { 'Right', 5 }, },
 
+  -- Rotate the active pane positions clockwise
+  { key = 'R', mods = 'LEADER', action = action.RotatePanes 'Clockwise', },
+
   -- Attach & detach ssh channel
-  { key = 'a', mods = 'LEADER', action = action.AttachDomain 'SSHMUX:omeda' },
+  { key = 'a', mods = 'LEADER', action = action.AttachDomain 'SSHMUX:omeda', },
   -- Detaches the domain associated with the current pane
   { key = 'd', mods = 'LEADER', action = action.DetachDomain 'CurrentPaneDomain', },
   -- Detaches the "devhost" domain
